@@ -672,20 +672,29 @@
 }
 
 .thesis-section {
-  margin-top: clamp(5rem, 9vw, 8rem);
-  padding-top: clamp(3rem, 6vw, 4.5rem);
-  padding-bottom: clamp(3rem, 6vw, 4.5rem);
-  border-top: 1px solid rgba(28, 26, 21, 0.16);
-  border-bottom: 1px solid rgba(28, 26, 21, 0.16);
+  margin-top: clamp(3.8rem, 7vw, 6rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid rgba(28, 26, 21, 0.12);
+  border-bottom: 1px solid rgba(28, 26, 21, 0.12);
+  background: rgba(250, 247, 241, 0.46);
 }
 
 .thesis-section p {
-  margin: 0 0 1.2rem;
+  margin: 0 0 0.85rem;
   color: #756f64;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 850;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+}
+
+.thesis-section h2 {
+  max-width: 820px;
+  font-size: clamp(1.65rem, 3vw, 2.65rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: #2b2823;
 }
 
 .lever-grid {
@@ -724,12 +733,13 @@
 
 .geo-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.68fr);
+  grid-template-columns: minmax(0, 0.94fr) minmax(20rem, 0.72fr);
   gap: 1rem;
   padding: 0;
   background: transparent;
   border: 0;
   box-shadow: none;
+  overflow: hidden;
 }
 
 .geo-card--bruder > * {
@@ -744,7 +754,12 @@
 }
 
 .geo-copy h2 {
-  max-width: 760px;
+  max-width: 100%;
+  font-size: clamp(2.85rem, 4.1vw, 4.45rem);
+  line-height: 1.01;
+  letter-spacing: -0.055em;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .geo-copy p:not(.eyebrow) {
@@ -1040,6 +1055,14 @@
 
   .hero-copy h1 {
     font-size: clamp(2.55rem, 12vw, 3.65rem);
+  }
+
+  .geo-copy h2 {
+    font-size: clamp(2.25rem, 10vw, 3.25rem);
+  }
+
+  .thesis-section h2 {
+    font-size: clamp(1.45rem, 7vw, 2.15rem);
   }
 
   .section-label {

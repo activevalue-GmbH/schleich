@@ -320,7 +320,7 @@ export default function Home() {
         <section className="thesis-section">
           <p>Zentrale These</p>
           <h2>
-            schleich hat keine Markenlücke, sondern eine digitale Übersetzungslücke: Die Marke bringt starke Welten, Emotion und Produktqualität mit, aber der Shop verliert an konkreten Stellen Geschwindigkeit, Führung, Beratungsleistung und maschinenlesbare Sichtbarkeit.
+            schleich hat keine Markenlücke, sondern eine digitale Übersetzungslücke. Der Shop verliert an konkreten Stellen Geschwindigkeit, Führung, Beratungsleistung und maschinenlesbare Sichtbarkeit.
           </h2>
         </section>
 
@@ -372,7 +372,7 @@ export default function Home() {
           <div className="geo-card geo-card--bruder">
             <div className="geo-copy">
               <p className="eyebrow">GEO als Zusatzspur</p>
-              <h2>Wenn KI Antworten baut, müssen Spielwelten und Produktinformationen maschinenlesbar werden.</h2>
+              <h2>Wenn KI Antworten baut, müssen Spielwelten und Produktdaten lesbar werden.</h2>
               <p>
                 GEO bleibt hier eine Zusatzspur. Für schleich ist sie trotzdem relevant, weil Antwortsysteme künftig stärker entscheiden, welche Marken bei konkreten Fragen sichtbar werden.
               </p>
