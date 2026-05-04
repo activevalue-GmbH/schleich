@@ -179,7 +179,11 @@ export default function Home() {
     <div className="site-shell">
       <header className="topbar">
         <a className="brand-cluster" href="#top" aria-label="Zum Seitenanfang">
-          <span className="active-logo">active<br />value</span>
+          <img
+            className="active-logo-image"
+            src="https://activevalue-gmbh.github.io/bruder/assets/logo.png"
+            alt="active value"
+          />
           <span className="brand-divider" />
           <span className="client-logo">schleich</span>
         </a>
