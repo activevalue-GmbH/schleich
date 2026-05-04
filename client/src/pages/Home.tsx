@@ -125,6 +125,14 @@ const levers = [
   },
 ];
 
+const geoQuestions = [
+  "Bei welchen KI-Fragen sollte schleich sichtbar sein?",
+  "Welche Wettbewerber werden in KI-Antworten genannt?",
+  "Welche Quellen nutzen Antwortsysteme für Produkt- und Markeninformationen?",
+  "Sind Spielwelten, Alterslogik und Geschenkideen strukturiert lesbar?",
+  "Wo fehlen klare Antworten auf typische Nutzerfragen?",
+];
+
 const reviewSteps = [
   "404-Pfade und technische Reibungspunkte validieren",
   "Performance-Bremsen nach Wirkung priorisieren",
@@ -358,19 +366,49 @@ export default function Home() {
 
         <section id="geo" className="chapter geo-chapter">
           <SectionLabel number="4" label="GEO" />
-          <div className="geo-card">
-            <div>
-              <p className="eyebrow">KI- und GEO-Zusatzspur</p>
+          <div className="geo-card geo-card--bruder">
+            <div className="geo-copy">
+              <p className="eyebrow">GEO als Zusatzspur</p>
               <h2>Wenn KI Antworten baut, müssen Spielwelten und Produktinformationen maschinenlesbar werden.</h2>
-            </div>
-            <div className="chapter-text">
               <p>
-                GEO ist nicht das Hauptthema dieser Impulsanalyse, aber eine relevante Zukunftsspur. Fragen wie „Geschenk für Pferdefan ab 5 Jahren“, „realistische Tierfiguren“ oder „pädagogisch wertvolles Spielzeug“ werden künftig stärker von Antwortsystemen vorstrukturiert.
+                GEO bleibt hier eine Zusatzspur. Für schleich ist sie trotzdem relevant, weil Antwortsysteme künftig stärker entscheiden, welche Marken bei konkreten Fragen sichtbar werden.
               </p>
               <p>
-                Der Hebel für schleich liegt darin, Produktdaten, Spielwert, Alterslogik, Geschenkideen und Produktwelt-Beziehungen so aufzubauen, dass Menschen, Suchmaschinen und KI-Systeme dieselbe klare Antwort lesen können.
+                Die Prüffrage ist pragmatisch: Sind Spielwelten, Produktdaten, Alterslogik, Geschenkideen und Quellen so strukturiert, dass Antwortsysteme sie korrekt lesen, einordnen und zitieren können?
               </p>
             </div>
+            <div className="geo-review-box">
+              <span>Mögliche Prüffragen im Review</span>
+              {geoQuestions.map((question) => (
+                <p key={question}><CheckCircle2 size={16} />{question}</p>
+              ))}
+            </div>
+            <div className="geo-business-point">
+              <span>Unternehmerischer Punkt</span>
+              <p>
+                GEO ist kein separates Trendthema. Es zeigt, wie wichtig klare Struktur, Autorität und zitierfähiger Content für Sichtbarkeit werden.
+              </p>
+            </div>
+            <form className="geo-domain-check" action="mailto:anton.klees@active-value.de?subject=schleich%20GEO-Status%20anfragen" method="post" encType="text/plain">
+              <div>
+                <p className="eyebrow">Direkte Anfrage</p>
+                <h3>Domain-Check für den GEO-Status anfragen</h3>
+                <p>Wenn schleich die Ausgangslage direkt prüfen möchte, reicht hier die Angabe der Domain. Die Anfrage geht direkt an Anton Klees.</p>
+              </div>
+              <label>
+                <span>Zu prüfende Domain</span>
+                <input name="domain" type="text" placeholder="z. B. schleich-s.com" defaultValue="schleich-s.com" />
+              </label>
+              <label>
+                <span>Ihr Name</span>
+                <input name="name" type="text" placeholder="Vor- und Nachname" />
+              </label>
+              <label>
+                <span>Ihre E-Mail</span>
+                <input name="email" type="email" placeholder="name@unternehmen.de" />
+              </label>
+              <button type="submit">Analyse anfragen <ArrowRight size={17} /></button>
+            </form>
           </div>
         </section>
 
@@ -418,10 +456,20 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="footer">
-        <a href="#top" className="footer-brand">active-value.de</a>
-        <p>Externe Impulsanalyse für E-Commerce, Nutzerführung, Sichtbarkeit und digitale Vertrauenssignale.</p>
-        <a href="mailto:anton.klees@active-value.de">anton.klees@active-value.de</a>
+      <footer className="footer footer--bruder">
+        <div className="footer-address">
+          <strong>active value GmbH</strong>
+          <span>Benzenbergstraße 39-47</span>
+          <span>40219 Düsseldorf</span>
+          <a href="https://www.active-value.de">active-value.de</a>
+        </div>
+        <div className="footer-contact">
+          <span>Kontakt</span>
+          <strong>Anton Klees</strong>
+          <a href="mailto:anton.klees@active-value.de">Mit anton.klees@active-value.de Kontakt aufnehmen</a>
+          <a href="tel:+491733420483">Tel. 0173 3420483</a>
+        </div>
+        <p>Website-Impulsanalyse · Eine externe E-Commerce-, Nutzerführungs- und Sichtbarkeitsperspektive von active value</p>
       </footer>
     </div>
   );
