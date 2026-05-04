@@ -187,11 +187,14 @@ export default function Home() {
     <div className="site-shell">
       <header className="topbar">
         <a className="brand-cluster" href="#top" aria-label="Zum Seitenanfang">
-          <img
-            className="active-logo-image"
-            src="https://activevalue-gmbh.github.io/bruder/assets/logo.png"
-            alt="active value"
-          />
+          <span className="active-logo-block">
+            <img
+              className="active-logo-image"
+              src="https://activevalue-gmbh.github.io/bruder/assets/logo.png"
+              alt="active value"
+            />
+            <span className="active-logo-url">active-value.de</span>
+          </span>
           <span className="brand-divider" />
           <span className="client-logo">schleich</span>
         </a>
@@ -210,7 +213,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: "easeOut" }}
           >
-            <p className="eyebrow">schleich Website-Impulsanalyse</p>
+            <p className="eyebrow">schleich Webshop-Impulsanalyse</p>
             <h1>
               schleich bringt starke Spielwelten mit. Der deutsche Shop verliert an konkreten Stellen digitale Wirkung.
             </h1>
@@ -442,7 +445,7 @@ export default function Home() {
               <p>
                 Sinnvoll ist kein allgemeiner Austausch, sondern ein fokussierter Review mit priorisierter Hebelliste. Ziel ist eine belastbare Shortlist für Technik, Nutzerführung, Suche, Commerce-Führung, Sichtbarkeit, Compliance und GEO.
               </p>
-              <a className="primary-cta" href="mailto:anton.klees@active-value.de?subject=schleich%20Website-Impulsanalyse">
+              <a className="primary-cta" href="mailto:anton.klees@active-value.de?subject=schleich%20Webshop-Impulsanalyse">
                 Review mit active value vorbereiten <ArrowRight size={18} />
               </a>
             </div>
@@ -469,7 +472,7 @@ export default function Home() {
           <a href="mailto:anton.klees@active-value.de">Mit anton.klees@active-value.de Kontakt aufnehmen</a>
           <a href="tel:+491733420483">Tel. 0173 3420483</a>
         </div>
-        <p>Website-Impulsanalyse · Eine externe E-Commerce-, Nutzerführungs- und Sichtbarkeitsperspektive von active value</p>
+        <p>Webshop-Impulsanalyse · Eine externe E-Commerce-, Nutzerführungs- und Sichtbarkeitsperspektive von active value</p>
       </footer>
     </div>
   );

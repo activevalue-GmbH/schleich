@@ -1,0 +1,29 @@
+# Todo – schleich Impulsanalyse
+
+- [ ] Vorhandene Analyse- und Vorlagendateien für die finale Landingpage-Implementierung erneut prüfen.
+- [ ] `Home.tsx`, `index.css` und `client/index.html` im gewählten Editorial-Swiss-Modernism-Stil umsetzen.
+- [ ] Generierte Web-Asset-URLs korrekt und deployment-sicher in die Landingpage einbinden.
+- [ ] Build lokal prüfen und GitHub-Pages-kompatible Ausgabe vorbereiten.
+- [ ] Vorhandenes Repository `activevalue-GmbH/schleich` über GitHub CLI nutzen und fertige Dateien pushen.
+- [ ] Einen abschließenden Webdev-Checkpoint erstellen und Ergebnis mit Preview-/Repository-Hinweisen liefern.
+- [ ] Visualisierung konsequent an der Bruder-Referenzseite ausrichten: gleiche Präsentationslogik, ähnliche Dramaturgie, helle hochwertige Flächen, klare Befundkarten und keine abweichende eigenständige Bildsprache.
+- [ ] Visualisierung konsequent an der Bruder-Referenzseite ausrichten: gleiche Präsentationslogik, ähnliche Dramaturgie, helle hochwertige Flächen, klare Befundkarten und keine abweichende eigenständige Bildsprache.
+- [ ] Inhaltliche Tonalität scharf befundorientiert halten: Jede Kernsektion muss sofort beantworten, was konkret gefunden wurde, warum es relevant ist und welcher Hebel daraus folgt.
+- [ ] Nach erteiltem Schreibzugriff für `oliverbargfeld` den vorbereiteten Commit erneut nach `activevalue-GmbH/schleich` pushen und den GitHub-Pages-Workflow prüfen.
+- [ ] Explizit verifizieren, dass das lokale Remote auf `https://github.com/activevalue-GmbH/schleich.git` zeigt, und den blockierenden Rechtefehler vom Repository-Ziel trennen.
+- [ ] Nach möglicher GitHub-Neuautorisierung Zugriff erneut prüfen, vorbereiteten Commit pushen und Repository-/Pages-Status kontrollieren.
+- [ ] Nach der gerade vorgenommenen Neuautorisierung den GitHub-Token erneut prüfen, den vorbereiteten Commit pushen und den Pages-Workflow kontrollieren.
+- [ ] Workflow-Berechtigungsblocker berücksichtigen: Contents-Push ist möglich, aber `.github/workflows/deploy-pages.yml` wird ohne Workflow-Schreibrecht von GitHub abgelehnt; Website-Code daher zunächst ohne Workflow übertragen.
+- [ ] Da Workflow-Schreibrechte fehlen, den statischen GitHub-Pages-Build über einen separaten `gh-pages`-Branch veröffentlichen und Pages auf diesen Branch konfigurieren.
+- [x] Active-value-Originallogo im Header exakt im Bruder-Stil darstellen, nicht als getrenntes grünes Icon plus Text.
+- [x] Hero-Headline deutlich verkleinern, damit sie näher am Bruder-Referenzmaßstab liegt und nicht überdimensioniert wirkt.
+- [x] Anpassungen lokal bauen und auf GitHub Pages veröffentlichen.
+- [x] Live-URL prüfen und neuen Checkpoint sichern.
+- [x] Footer nach Bruder-Maßstab angleichen: reduzierte active-value-Absenderlogik, klare Kontaktzeile, ruhige Dossier-Tonalität.
+- [x] GEO-Check nach Bruder-Maßstab angleichen: zurückhaltender, prüfender Zusatzabschnitt statt zu großem eigenständigem Zukunftskapitel.
+- [x] Aktualisierten Stand bauen, auf GitHub Pages veröffentlichen und Live-URL prüfen.
+- [x] Neuen Webdev-Checkpoint sichern.
+- [x] Alle Vorkommen von „Website-Impulsanalyse“ auf „Webshop-Impulsanalyse“ ändern.
+- [x] Unter dem active-value-Logo im Header die URL `active-value.de` sichtbar platzieren.
+- [ ] Änderung bauen, auf GitHub Pages veröffentlichen und live prüfen.
+- [ ] Neuen Webdev-Checkpoint sichern.
