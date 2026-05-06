@@ -462,9 +462,9 @@ export default function Home() {
       <footer className="footer footer--bruder">
         <div className="footer-address">
           <strong>active value GmbH</strong>
-          <span>Benzenbergstraße 39-47</span>
+          <span>Benzenbergstraße 39–47</span>
           <span>40219 Düsseldorf</span>
-          <a href="https://www.active-value.de">active-value.de</a>
+          <a href="https://www.active-value.de">www.active-value.de</a>
         </div>
         <div className="footer-contact">
           <span>Kontakt</span>
