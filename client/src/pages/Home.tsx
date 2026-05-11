@@ -253,7 +253,10 @@ export default function Home() {
           <div className="chapter-grid">
             <div>
               <p className="eyebrow">Warum wir geschaut haben</p>
-              <h2>Der Hebel liegt nicht in einer neuen Markenerzählung, sondern darin, vorhandene und generische Nachfrage besser in Produktentdeckung zu übersetzen.</h2>
+              <h2 className="statement-heading">
+                <span>Nicht neue Markenerzählung.</span>
+                <span>Nachfrage besser übersetzen.</span>
+              </h2>
             </div>
             <div className="chapter-text">
               <p>
@@ -292,7 +295,7 @@ export default function Home() {
           <SectionLabel number="2" label="Befunde" />
           <div className="wide-heading">
             <p className="eyebrow">Was wir gefunden haben</p>
-            <h2>Digitale Wirkung entsteht, wenn Acquisition, Orientierung und Trust als ein Funnel gelesen werden.</h2>
+            <h2>Acquisition, Orientierung und Trust als ein Funnel.</h2>
           </div>
           <div className="observation-list">
             {observations.map((item) => (
@@ -324,7 +327,7 @@ export default function Home() {
         <section className="thesis-section">
           <p>Zentrale These</p>
           <h2>
-            schleich hat keine Markenlücke. Die offene Frage ist, wie viel Nachfrage vor der Marke und wie viel Produktentdeckung im Shop noch nicht konsequent in Umsatz übersetzt wird.
+            schleich hat keine Markenlücke. Die offene Frage ist, wie viel Nachfrage vor der Marke und wie viel Produktentdeckung im Shop noch nicht in Umsatz übersetzt wird.
           </h2>
         </section>
 
@@ -376,7 +379,10 @@ export default function Home() {
           <div className="geo-card geo-card--bruder">
             <div className="geo-copy">
               <p className="eyebrow">GEO als Zusatzspur</p>
-              <h2>Wenn KI Antworten baut, müssen Spielwelten und Produktdaten lesbar werden.</h2>
+              <h2 className="statement-heading statement-heading--geo">
+                <span>Wenn KI Antworten baut,</span>
+                <span>müssen Produktdaten lesbar werden.</span>
+              </h2>
               <p>
                 GEO bleibt hier eine Zusatzspur. Für schleich ist sie trotzdem relevant, weil Antwortsysteme künftig stärker entscheiden, welche Marken bei konkreten Fragen sichtbar werden.
               </p>
@@ -399,7 +405,7 @@ export default function Home() {
             <form className="geo-domain-check" action="mailto:anton.klees@active-value.de?subject=schleich%20GEO-Status%20anfragen" method="post" encType="text/plain">
               <div>
                 <p className="eyebrow">Direkte Anfrage</p>
-                <h3>Domain-Check für den GEO-Status anfragen</h3>
+                <h3>GEO-Status der Domain prüfen</h3>
                 <p>Wenn schleich die Ausgangslage direkt prüfen möchte, reicht hier die Angabe der Domain. Die Anfrage geht direkt an Anton Klees.</p>
               </div>
               <label>
@@ -422,7 +428,7 @@ export default function Home() {
         <section className="not-relaunch-section">
           <div>
             <p className="eyebrow">Was daraus nicht folgt</p>
-            <h2>Diese Unterlage behauptet keinen pauschalen Relaunch-Bedarf.</h2>
+            <h2>Kein Relaunch-Urteil. Eine priorisierte Prüfliste.</h2>
           </div>
           <div className="comparison-table" role="table" aria-label="Einordnung der Aussagen">
             <div role="row">
@@ -445,7 +451,7 @@ export default function Home() {
           <div className="review-grid">
             <div>
               <p className="eyebrow">Vorschlag für den nächsten Schritt</p>
-              <h2>45-Minuten-Digital-Quick-Read: drei Befunde, konkrete Konsequenzen, priorisierte nächste Schritte.</h2>
+              <h2>45-Minuten-Quick-Read: drei Befunde, nächste Schritte.</h2>
               <p>
                 Sinnvoll ist kein allgemeiner Austausch, sondern ein fokussierter Quick Read: Was zeigt der externe Blick zu Compliance, Non-Brand-Sichtbarkeit und Produktentdeckung – und welche Maßnahmen gehören in das nächste Quartal?
               </p>
