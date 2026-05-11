@@ -32,16 +32,16 @@ const navItems = [
 const hardFindings = [
   {
     eyebrow: "Performance",
-    value: "1/100",
-    title: "HORSE CLUB im Lighthouse-Test",
-    text: "Zentrale Seiten wirken messbar langsam. Für Mobile Commerce ist das kein Feintuning, sondern ein Reibungsverlust vor der Kaufentscheidung.",
+    value: "mobil",
+    title: "Produktwelten brauchen schnelle Einstiege",
+    text: "Starke Nachfrageanker wie HORSE CLUB entfalten digital nur dann Wirkung, wenn mobile Nutzer ohne Wartezeit und Reibung in die passende Spielwelt finden.",
     icon: Gauge,
   },
   {
-    eyebrow: "Navigation",
-    value: "404",
-    title: "Prominenter Produktwelt-Pfad lief ins Leere",
-    text: "Ein HORSE-CLUB-Einstieg führte im Test auf eine fehlerhafte URL mit `horse-club%20tabindex=`. Ein Kernpfad darf nicht abbrechen.",
+    eyebrow: "Orientierung",
+    value: "Pfad",
+    title: "Spielwelt-Einstiege müssen verlässlich führen",
+    text: "Produktwelten sind kaufnahe Einstiege. Hier zählen klare Wege, konsistente Links und schnelle Übergänge von Interesse zu Produkt, Set und Ergänzung.",
     icon: Link2Off,
   },
   {
@@ -57,18 +57,18 @@ const observations = [
   {
     number: "01",
     kicker: "Beobachtung 1",
-    title: "Die technische Basis bremst digitale Wirkung.",
-    finding: "Gefunden wurde ein sehr schwaches Lighthouse-Signal: Startseite im niedrigen zweistelligen Bereich, HORSE CLUB bei 1/100. Zusätzlich wurden lange Interaktions- und Ladezeiten sichtbar.",
-    relevance: "Wenn zentrale Einstiege langsam reagieren, entsteht Wartezeit aus vorhandener Nachfrage. Das betrifft nicht nur UX, sondern auch Vertrauen, Markenwahrnehmung und Conversion-Voraussetzungen.",
-    lever: "Performance, Third-Party-Code, Bildlast, Script-Last und zentrale mobile Pfade priorisiert prüfen.",
+    title: "Starke Produktwelten verlieren Wirkung, wenn der mobile Einstieg bremst.",
+    finding: "HORSE CLUB, DINOSAURS und WILD LIFE sind klare Nachfrageanker. In der digitalen Journey wird daraus erst dann Kaufnähe, wenn Einstieg, Ladeverhalten und Orientierung sauber zusammenspielen.",
+    relevance: "Wenn mobile Nutzer an zentralen Spielwelt-Einstiegen warten, suchen oder neu ansetzen müssen, verliert der Shop Potenzial an genau den Stellen, an denen Interesse bereits vorhanden ist.",
+    lever: "Mobile Performance, Third-Party-Code, Bildlast, Script-Last und zentrale Spielwelt-Einstiege priorisiert prüfen.",
   },
   {
     number: "02",
     kicker: "Beobachtung 2",
-    title: "Ein prominenter Produktwelt-Einstieg lief im Test auf 404.",
-    finding: "Der HORSE-CLUB-Pfad aus der Navigation führte auf eine fehlerhafte URL mit `horse-club%20tabindex=` und damit auf ein 404-Erlebnis.",
-    relevance: "HORSE CLUB ist keine Randkategorie. Wenn ein sichtbarer Produktwelt-Einstieg ins Leere läuft, entsteht ein Qualitätsbruch an einer kaufnahen Stelle.",
-    lever: "Navigation, URL-Generierung, interne Links und Fehlerseiten-Monitoring kurzfristig validieren.",
+    title: "Produktwelt-Pfade müssen wie Verkaufsflächen funktionieren.",
+    finding: "Die Analyse fokussiert nicht auf einzelne Fehlerbilder, sondern auf die Verlässlichkeit zentraler Einstiege: Nutzer müssen von Spielwelt, Alter oder Geschenkidee ohne Bruch zum passenden Produkt geführt werden.",
+    relevance: "HORSE CLUB, DINOSAURS und WILD LIFE sind keine Randbereiche. Wenn diese Einstiege unklar, langsam oder technisch inkonsistent wirken, entsteht Reibung an kaufnahen Stellen.",
+    lever: "Navigation, URL-Logik, interne Links, Kategorie-Einstiege und Fehlerseiten-Monitoring regelmäßig validieren.",
   },
   {
     number: "03",
@@ -91,9 +91,9 @@ const levers = [
   {
     icon: Waypoints,
     title: "Navigation & Produktwelt-Pfade",
-    finding: "Ein HORSE-CLUB-Kernpfad führte auf 404.",
-    impact: "Weniger Orientierungslücken und höhere Verlässlichkeit in zentralen Einstiegen.",
-    action: "Interne Linklogik, URL-Encoding, Fehlerseiten-Monitoring und Produktwelt-Navigation prüfen.",
+    finding: "Spielwelt-Einstiege müssen konsistent, schnell und ohne technische Brüche funktionieren.",
+    impact: "Weniger Orientierungslücken und höhere Verlässlichkeit in zentralen kaufnahen Einstiegen.",
+    action: "Interne Linklogik, URL-Encoding, Fehlerseiten-Monitoring und Produktwelt-Navigation regelmäßig prüfen.",
   },
   {
     icon: Search,
@@ -162,10 +162,10 @@ function BrowserFindingCard() {
       <div className="browser-body">
         <div className="mini-hero">
           <div>
-            <small>Messbarer Befund</small>
-            <strong>HORSE CLUB</strong>
+            <small>Commerce-Hebel</small>
+            <strong>PRODUKTWELTEN</strong>
           </div>
-          <div className="score-pill">1/100</div>
+          <div className="score-pill">mobil</div>
         </div>
         <div className="audit-lines">
           <span className="wide" />
@@ -175,7 +175,7 @@ function BrowserFindingCard() {
         </div>
         <div className="error-row">
           <AlertTriangle size={18} />
-          <p>404 bei prominentem Produktwelt-Link</p>
+          <p>Starke Nachfrageanker, schwacher digitaler Einstieg</p>
         </div>
       </div>
     </div>
@@ -215,10 +215,10 @@ export default function Home() {
           >
             <p className="eyebrow">schleich Webshop-Impulsanalyse</p>
             <h1>
-              schleich bringt starke Spielwelten mit. Der deutsche Shop verliert an konkreten Stellen digitale Wirkung.
+              Starke Produktwelten, schwacher digitaler Einstieg.
             </h1>
             <p className="hero-intro">
-              Die Analyse startet nicht bei Markenmeinungen, sondern bei prüfbaren Befunden: Performance, fehlerhafte Pfade, Suche, Kategorie-Führung, Warenkorbwert, Datenstruktur und Trust. Die zentrale Frage lautet: Führt der Shop Nutzer schnell genug vom Interesse zur passenden Spielwelt und zum nächsten Kaufimpuls?
+              Schleich hat mit HORSE CLUB, DINOSAURS und WILD LIFE klare Nachfrageanker. Wenn diese Einstiege mobil langsam, unklar oder technisch inkonsistent wirken, verliert der Shop genau dort Potenzial, wo Kaufinteresse bereits vorhanden ist.
             </p>
           </motion.div>
 
@@ -230,14 +230,14 @@ export default function Home() {
           >
             <div className="summary-card">
               <span>Kurzaussage</span>
-              <h2>Die Marke ist stark. Die digitale Führung zeigt messbare Reibung.</h2>
+              <h2>Die Marke ist stark. Der Hebel liegt im schnelleren Zugang zu den Spielwelten.</h2>
               <p>Eine externe E-Commerce-, Nutzerführungs- und Sichtbarkeitsperspektive von active value.</p>
             </div>
             <BrowserFindingCard />
             <div className="focus-card">
               <span>Fokus</span>
               <p>Performance messbar verbessern</p>
-              <p>Produktwelt-Pfade absichern</p>
+              <p>Spielwelt-Einstiege klarer führen</p>
               <p>Suche nach Kaufintention führen</p>
               <p>Warenkorbwert markenlogisch erhöhen</p>
             </div>
@@ -256,7 +256,7 @@ export default function Home() {
                 schleich verkauft nicht nur Figuren. Die Marke verkauft Spielwelten, Fantasie, Tiernähe, Sammelimpulse und Geschenkideen. Genau deshalb muss der Shop mehr leisten als Produktlisten: Er muss beraten, führen, ergänzen und Suchintentionen verstehen.
               </p>
               <p>
-                Die Außenprüfung zeigt: Die Substanz ist vorhanden. Sichtbar sind aber konkrete Reibungspunkte, die den Weg vom Interesse zum Kaufimpuls unnötig schwer machen.
+                Die Außenprüfung zeigt: Die Substanz ist vorhanden. Der kurzfristige Hebel liegt darin, starke Nachfrageanker digital schneller, klarer und verlässlicher in Kaufimpulse zu übersetzen.
               </p>
             </div>
           </div>
@@ -320,7 +320,7 @@ export default function Home() {
         <section className="thesis-section">
           <p>Zentrale These</p>
           <h2>
-            schleich hat keine Markenlücke, sondern eine digitale Übersetzungslücke. Der Shop verliert an konkreten Stellen Geschwindigkeit, Führung, Beratungsleistung und maschinenlesbare Sichtbarkeit.
+            schleich hat keine Markenlücke, sondern eine digitale Zugangslücke. Der Shop sollte starke Spielwelten schneller, klarer und beratender vom Interesse zum passenden Produkt übersetzen.
           </h2>
         </section>
 
