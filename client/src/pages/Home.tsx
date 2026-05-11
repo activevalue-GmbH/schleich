@@ -3,14 +3,10 @@ import {
   AlertTriangle,
   ArrowRight,
   CheckCircle2,
-  FileSearch,
   Gauge,
-  Link2Off,
   Search,
   ShieldCheck,
-  Sparkles,
   Target,
-  Waypoints,
 } from "lucide-react";
 
 /**
@@ -31,97 +27,76 @@ const navItems = [
 
 const hardFindings = [
   {
-    eyebrow: "Performance",
-    value: "mobil",
-    title: "Produktwelten brauchen schnelle Einstiege",
-    text: "Starke Nachfrageanker wie HORSE CLUB entfalten digital nur dann Wirkung, wenn mobile Nutzer ohne Wartezeit und Reibung in die passende Spielwelt finden.",
+    eyebrow: "Funnel",
+    value: "45 %",
+    title: "Fast jeder zweite Einstieg bricht ab",
+    text: "Bei rund 317.000 monatlichen Besuchen wird der Einstieg zur kommerziellen Schlüsselfrage: Nachfrage ist da, Produktentdeckung entsteht zu selten schnell genug.",
     icon: Gauge,
   },
   {
-    eyebrow: "Orientierung",
-    value: "Pfad",
-    title: "Spielwelt-Einstiege müssen verlässlich führen",
-    text: "Produktwelten sind kaufnahe Einstiege. Hier zählen klare Wege, konsistente Links und schnelle Übergänge von Interesse zu Produkt, Set und Ergänzung.",
-    icon: Link2Off,
+    eyebrow: "Acquisition",
+    value: "~1.900",
+    title: "Organik wirkt fast nur als Markenkanal",
+    text: "Wer schleich kennt, findet schleich. Wer nach Pferde-Spielzeug, Dinosaurier-Sets oder Geschenkideen sucht, wird offenbar zu selten früh genug abgeholt.",
+    icon: Search,
   },
   {
-    eyebrow: "Suche",
-    value: "Intent",
-    title: "Geschenk-Suche berät zu schwach",
-    text: "Die Anfrage „geschenk 5 jahre“ lieferte keine überzeugende Beratung und teils irrelevante Seitentreffer. Geschenkintention bleibt damit untergenutzt.",
-    icon: Search,
+    eyebrow: "Prüfbedarf",
+    value: "BFSG",
+    title: "Barrierefreiheit wird zum sichtbaren Trust-Thema",
+    text: "Die öffentliche Erklärung macht Accessibility zum konkreten Prüfpunkt: nicht als juristische Bewertung, sondern als akuter Review-Anlass mit Markenrelevanz.",
+    icon: ShieldCheck,
   },
 ];
 
 const observations = [
   {
     number: "01",
-    kicker: "Beobachtung 1",
-    title: "Starke Produktwelten verlieren Wirkung, wenn der mobile Einstieg bremst.",
-    finding: "HORSE CLUB, DINOSAURS und WILD LIFE sind klare Nachfrageanker. In der digitalen Journey wird daraus erst dann Kaufnähe, wenn Einstieg, Ladeverhalten und Orientierung sauber zusammenspielen.",
-    relevance: "Wenn mobile Nutzer an zentralen Spielwelt-Einstiegen warten, suchen oder neu ansetzen müssen, verliert der Shop Potenzial an genau den Stellen, an denen Interesse bereits vorhanden ist.",
-    lever: "Mobile Performance, Third-Party-Code, Bildlast, Script-Last und zentrale Spielwelt-Einstiege priorisiert prüfen.",
+    kicker: "Acquisition",
+    title: "Die Marke wird gefunden. Die generische Nachfrage wird zu selten gewonnen.",
+    finding: "Der Quick Check weist rund 1.900 organische Keywords aus, nahezu vollständig im Markenraum. Kaufnahe Motive wie Spielwelt, Alter, Anlass und Geschenkidee werden damit nicht konsequent als Einstiege genutzt.",
+    relevance: "Für eine bekannte Marke ist das die eigentliche Wachstumslücke: Menschen mit Kaufabsicht suchen nicht zwingend nach „schleich“, sondern nach dem passenden Geschenk, Tier, Set oder Spielthema.",
+    lever: "Non-Brand-Keyword-Architektur je Spielwelt entwickeln: Entdecken, Schenken, Sammeln, Alter und Starter-Sets als eigene Kategoriestruktur führen.",
   },
   {
     number: "02",
-    kicker: "Beobachtung 2",
-    title: "Produktwelt-Pfade müssen wie Verkaufsflächen funktionieren.",
-    finding: "Die Analyse fokussiert nicht auf einzelne Fehlerbilder, sondern auf die Verlässlichkeit zentraler Einstiege: Nutzer müssen von Spielwelt, Alter oder Geschenkidee ohne Bruch zum passenden Produkt geführt werden.",
-    relevance: "HORSE CLUB, DINOSAURS und WILD LIFE sind keine Randbereiche. Wenn diese Einstiege unklar, langsam oder technisch inkonsistent wirken, entsteht Reibung an kaufnahen Stellen.",
-    lever: "Navigation, URL-Logik, interne Links, Kategorie-Einstiege und Fehlerseiten-Monitoring regelmäßig validieren.",
+    kicker: "Conversion",
+    title: "Der Einstieg muss schneller von Interesse zu Produktentdeckung führen.",
+    finding: "317.000 monatliche Besuche und 45 % Bounce Rate sind kein reines Traffic-Thema. Sie zeigen, dass Orientierung, Geschwindigkeit und Produktlogik direkt am Eintrittspunkt entscheiden.",
+    relevance: "Wenn Nutzer den Shop verlassen, bevor sie eine Produktseite sehen, verliert nicht die Marke an Stärke. Der Shop verliert die Chance, vorhandene Nachfrage in Auswahl, Set und Warenkorb zu übersetzen.",
+    lever: "Einstiegsseiten, Suche, Filter, Produktwelt-Pfade und Cross-Sell-Logik als zusammenhängenden Funnel prüfen statt isolierte UI-Korrekturen vorzunehmen.",
   },
   {
     number: "03",
-    kicker: "Beobachtung 3",
-    title: "Die Suche findet Produkte, berät aber zu wenig nach Kaufabsicht.",
-    finding: "Produktnahe Suchanfragen funktionieren besser als beratende Anfragen. Bei „geschenk 5 jahre“ werden Kaufanlass, Alter und Geschenklogik nicht stark genug geführt.",
-    relevance: "Viele schleich-Käufe beginnen nicht mit einer Artikelnummer, sondern mit Anlass, Alter, Interesse oder Geschenkidee. Genau dort muss der Shop Orientierung leisten.",
-    lever: "Suchlogik, Synonyme, kuratierte Landingpages und Geschenkberatung nach Alter, Interesse und Spielwelt aufbauen.",
+    kicker: "Trust",
+    title: "Compliance und strukturierte Daten werden Teil der Commerce-Qualität.",
+    finding: "Accessibility, Consent, Produktdaten und GEO sind keine Nebenthemen. Sie entscheiden mit darüber, ob Nutzer, Suchmaschinen und Antwortsysteme den Shop verlässlich lesen können.",
+    relevance: "Gerade bei Spielzeug entsteht Vertrauen aus Klarheit: barrierefreie Bedienbarkeit, verständliche Produktinformationen, Alterslogik, Sicherheitshinweise und zitierfähige Antworten.",
+    lever: "BFSG-/WCAG-Prüfbedarf, Consent-Setup, Produktdatenstruktur und GEO-Fähigkeit in einem kompakten Audit-Sprint priorisieren.",
   },
 ];
 
 const levers = [
   {
-    icon: Gauge,
-    title: "Performance & Stabilität",
-    finding: "Lighthouse zeigte zentrale Reibung auf Start- und Kategorieseiten.",
-    impact: "Weniger Wartezeit, bessere mobile Nutzbarkeit und stärkere Conversion-Grundlage.",
-    action: "Core Web Vitals, JavaScript-Last, Bilder, Consent-/Tracking-Tags und Renderpfade priorisieren.",
-  },
-  {
-    icon: Waypoints,
-    title: "Navigation & Produktwelt-Pfade",
-    finding: "Spielwelt-Einstiege müssen konsistent, schnell und ohne technische Brüche funktionieren.",
-    impact: "Weniger Orientierungslücken und höhere Verlässlichkeit in zentralen kaufnahen Einstiegen.",
-    action: "Interne Linklogik, URL-Encoding, Fehlerseiten-Monitoring und Produktwelt-Navigation regelmäßig prüfen.",
+    icon: ShieldCheck,
+    title: "Compliance als akuter Prüfpfad",
+    finding: "Accessibility, Consent und Produktsicherheitsinformationen sind öffentlich sichtbare Trust-Signale und sollten nicht als spätere Hygiene betrachtet werden.",
+    impact: "Weniger Risiko, mehr Vertrauen und bessere Bedienbarkeit für eine Marke, die Kinder und Familien adressiert.",
+    action: "BFSG-/WCAG-Scan, Consent-Kategorisierung, Produktdaten- und Checkout-Barrieren in einem priorisierten Fahrplan bündeln.",
   },
   {
     icon: Search,
-    title: "Suche & Kaufintention",
-    finding: "Geschenk- und Altersintentionen werden nicht stark genug verstanden.",
-    impact: "Mehr Relevanz für Eltern, Großeltern und Schenkende ohne konkrete Artikelnummer.",
-    action: "Beratende Suchmuster, Synonyme, Nulltrefferlogik und kuratierte Ergebnisflächen ausbauen.",
+    title: "Non-Brand-Sichtbarkeit aufbauen",
+    finding: "Das organische Profil wirkt stark markengetrieben; kaufnahe Suchmotive rund um Alter, Anlass und Spielwelt werden zu wenig als Einstieg genutzt.",
+    impact: "Mehr qualifizierte Nachfrage vor der Marke gewinnen, statt nur bestehende Markenbekanntheit zu bedienen.",
+    action: "Keyword-Architektur und Kategorieseiten pro Spielwelt entwickeln: Entdecken, Schenken, Sammeln, Starter-Sets und Alterslogik.",
   },
   {
     icon: Target,
-    title: "Kategorie-Führung",
-    finding: "HORSE CLUB zeigt viel Sortiment, aber zu wenig kuratierte Entscheidungshilfe.",
-    impact: "Aus Auswahl wird Orientierung: nach Alter, Anlass, Einstiegsset, Spielniveau und Ergänzung.",
-    action: "Kategorie-Module für Geschenklogik, Starter-Sets, Sammlerpfade und Spielwelt-Erweiterung entwickeln.",
-  },
-  {
-    icon: Sparkles,
-    title: "Warenkorbwert & Spielwelt-Komplettierung",
-    finding: "Upsell wirkt stärker schwellen- als spielweltgetrieben.",
-    impact: "Mehr AOV durch passende Ergänzungen statt rein promotionbasierter Mechanik.",
-    action: "Cross-Sell nach Spielwelt, Zubehör, Geschenkset, Ergänzungsfigur und Wiederkaufimpuls ausrichten.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Datenstruktur, Compliance & Trust",
-    finding: "Accessibility-, Struktur- und Produktdaten-Signale bleiben prüfbar relevant.",
-    impact: "Mehr Vertrauen, bessere Lesbarkeit für Suchmaschinen und bessere Grundlage für KI-Antwortsysteme.",
-    action: "Alt-Texte, Kontraste, Linknamen, Produktattribute, strukturierte Daten und Trust-Informationen prüfen.",
+    title: "Produktentdeckung in Conversion übersetzen",
+    finding: "Hoher Einstiegstraffic und starke Produktwelten erzeugen erst dann Umsatzwirkung, wenn Nutzer schnell zum passenden Produkt, Set oder Zubehör finden.",
+    impact: "Weniger Absprung, klarere Orientierung und höhere Chance auf Warenkorbwert durch spielweltlogische Ergänzungen.",
+    action: "Startseite, Suche, Filter, Produktwelt-Pfade und Cross-Sell als einen zusammenhängenden Entdeckungsfunnel prüfen.",
   },
 ];
 
@@ -134,11 +109,24 @@ const geoQuestions = [
 ];
 
 const reviewSteps = [
-  "404-Pfade und technische Reibungspunkte validieren",
-  "Performance-Bremsen nach Wirkung priorisieren",
-  "Suche nach Geschenk-, Alters- und Interessenintentionen testen",
-  "Kategorie- und Warenkorb-Hebel in schnelle Maßnahmen übersetzen",
-  "Compliance-, Accessibility- und GEO-Signale als Trust-Basis prüfen",
+  "BFSG-/WCAG-Prüfbedarf und Consent-Setup priorisieren",
+  "Non-Brand-Suchmotive je Spielwelt, Alter und Anlass mappen",
+  "Startseite, Suche und Kategoriepfade als Entdeckungsfunnel testen",
+  "Cross-Sell nach Spielwelt, Set-Logik und Ergänzungsfigur bewerten",
+  "GEO-Fähigkeit von Produktdaten, FAQs und Geschenk-Guides prüfen",
+];
+
+const heroStats = [
+  { label: "Besuche / Monat", value: "317k", note: "externe Schätzung" },
+  { label: "Bounce Rate", value: "45 %", note: "Funnel-Signal" },
+  { label: "organische Keywords", value: "~1.900", note: "fast nur Brand" },
+  { label: "Leitfrage", value: "3 Hebel", note: "Compliance · SEO · Conversion" },
+];
+
+const heroLevers = [
+  "Compliance prüfen",
+  "Non-Brand-Sichtbarkeit aufbauen",
+  "Produktentdeckung in Conversion übersetzen",
 ];
 
 function SectionLabel({ number, label }: { number: string; label: string }) {
@@ -205,46 +193,58 @@ export default function Home() {
       </header>
 
       <main id="top">
-        <section className="hero-section">
+        <section className="hero-section hero-section--free">
           <motion.div
-            className="hero-copy"
+            className="hero-copy hero-copy--free"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: "easeOut" }}
           >
-            <p className="eyebrow">schleich Webshop-Impulsanalyse</p>
-            <h1>
-              Starke Produktwelten, schwacher digitaler Einstieg.
-            </h1>
+            <p className="eyebrow">schleich Digital Quick Read</p>
+            <div className="hero-title-wrap">
+              <span className="hero-kicker-number">317k</span>
+              <h1>
+                Bekannte Marke.<br />
+                Verlorene Nachfrage.
+              </h1>
+            </div>
             <p className="hero-intro">
-              Schleich hat mit HORSE CLUB, DINOSAURS und WILD LIFE klare Nachfrageanker. Wenn diese Einstiege mobil langsam, unklar oder technisch inkonsistent wirken, verliert der Shop genau dort Potenzial, wo Kaufinteresse bereits vorhanden ist.
+              schleich wird gefunden, wenn Menschen bereits nach schleich suchen. Die größere Chance liegt davor: bei Eltern, die nach Pferden, Dinosauriern, Geschenkideen und passenden Spielwelten suchen – und im Shop-Einstieg zu früh wieder aussteigen.
             </p>
+            <div className="hero-proof-line" aria-label="Einordnung der Datenbasis">
+              <span>externe Schätzwerte</span>
+              <span>April 2026</span>
+              <span>kein Rechtsgutachten</span>
+            </div>
           </motion.div>
 
           <motion.aside
-            className="hero-panel"
+            className="hero-board"
+            aria-label="Quick-Read-Evidenz zur schleich-Analyse"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.12, ease: "easeOut" }}
           >
-            <div className="hero-dossier-card">
-              <div className="hero-dossier-head">
-                <span>Analyse-Fokus</span>
-                <p>Externe E-Commerce-, Nutzerführungs- und Sichtbarkeitsperspektive von active value.</p>
+            {heroStats.map((stat) => (
+              <article className="hero-stat-card" key={stat.label}>
+                <span>{stat.label}</span>
+                <strong>{stat.value}</strong>
+                <p>{stat.note}</p>
+              </article>
+            ))}
+            <article className="quick-read-card">
+              <div className="quick-read-head">
+                <span>45-Minuten-Gespräch</span>
+                <strong>Digital Quick Read</strong>
               </div>
-              <div className="summary-card">
-                <span>Kurzaussage</span>
-                <h2>Die Marke ist stark. Der Hebel liegt im schnelleren Zugang zu den Spielwelten.</h2>
+              <p>Kein Pitch. Drei Befunde mit direktem Business-Impact und einer priorisierten Route für das nächste Quartal.</p>
+              <div className="quick-read-levers">
+                {heroLevers.map((lever) => (
+                  <span key={lever}>{lever}</span>
+                ))}
               </div>
-              <BrowserFindingCard />
-              <div className="focus-card">
-                <span>Was daraus folgt</span>
-                <p>Performance messbar verbessern</p>
-                <p>Spielwelt-Einstiege klarer führen</p>
-                <p>Suche nach Kaufintention führen</p>
-                <p>Warenkorbwert markenlogisch erhöhen</p>
-              </div>
-            </div>
+            </article>
+            <BrowserFindingCard />
           </motion.aside>
         </section>
 
@@ -253,14 +253,14 @@ export default function Home() {
           <div className="chapter-grid">
             <div>
               <p className="eyebrow">Warum wir geschaut haben</p>
-              <h2>Der Hebel liegt nicht in einer neuen Markenerzählung, sondern in der besseren digitalen Übersetzung vorhandener Nachfrage.</h2>
+              <h2>Der Hebel liegt nicht in einer neuen Markenerzählung, sondern darin, vorhandene und generische Nachfrage besser in Produktentdeckung zu übersetzen.</h2>
             </div>
             <div className="chapter-text">
               <p>
                 schleich verkauft nicht nur Figuren. Die Marke verkauft Spielwelten, Fantasie, Tiernähe, Sammelimpulse und Geschenkideen. Genau deshalb muss der Shop mehr leisten als Produktlisten: Er muss beraten, führen, ergänzen und Suchintentionen verstehen.
               </p>
               <p>
-                Die Außenprüfung zeigt: Die Substanz ist vorhanden. Der kurzfristige Hebel liegt darin, starke Nachfrageanker digital schneller, klarer und verlässlicher in Kaufimpulse zu übersetzen.
+                Die Außenprüfung zeigt: Die Substanz ist vorhanden. Die Akquisechance liegt darin, Brand-Nachfrage nicht nur zu bedienen, sondern Non-Brand-Suchmotive, Spielwelt-Einstiege und Compliance-/Trust-Signale zu einem klaren Commerce-Funnel zu verbinden.
               </p>
             </div>
           </div>
@@ -292,7 +292,7 @@ export default function Home() {
           <SectionLabel number="2" label="Befunde" />
           <div className="wide-heading">
             <p className="eyebrow">Was wir gefunden haben</p>
-            <h2>Digitale Wirkung entsteht, wenn Geschwindigkeit, Einstieg, Produktlogik und nächster Schritt zusammenspielen.</h2>
+            <h2>Digitale Wirkung entsteht, wenn Acquisition, Orientierung und Trust als ein Funnel gelesen werden.</h2>
           </div>
           <div className="observation-list">
             {observations.map((item) => (
@@ -324,15 +324,15 @@ export default function Home() {
         <section className="thesis-section">
           <p>Zentrale These</p>
           <h2>
-            schleich hat keine Markenlücke, sondern eine digitale Zugangslücke. Der Shop sollte starke Spielwelten schneller, klarer und beratender vom Interesse zum passenden Produkt übersetzen.
+            schleich hat keine Markenlücke. Die offene Frage ist, wie viel Nachfrage vor der Marke und wie viel Produktentdeckung im Shop noch nicht konsequent in Umsatz übersetzt wird.
           </h2>
         </section>
 
         <section id="hebel" className="chapter levers-chapter">
           <SectionLabel number="3" label="Hebel" />
           <div className="wide-heading compact">
-            <p className="eyebrow">Sechs prüfbare Ansatzpunkte</p>
-            <h2>Aus Befunden werden priorisierbare Commerce-Hebel.</h2>
+            <p className="eyebrow">Drei priorisierte Ansatzpunkte</p>
+            <h2>Aus dem Quick Check wird eine klare Route für Compliance, Sichtbarkeit und Conversion.</h2>
           </div>
           <div className="lever-grid">
             {levers.map((lever, index) => {
@@ -435,7 +435,7 @@ export default function Home() {
             </div>
             <div role="row">
               <span role="cell">Nächster Schritt</span>
-              <strong role="cell">„404, Performance, Suche, Kategorie, Warenkorb und Datenstruktur konkret validieren.“</strong>
+              <strong role="cell">„Compliance, Non-Brand-Sichtbarkeit und Produktentdeckung konkret priorisieren.“</strong>
             </div>
           </div>
         </section>
@@ -445,9 +445,9 @@ export default function Home() {
           <div className="review-grid">
             <div>
               <p className="eyebrow">Vorschlag für den nächsten Schritt</p>
-              <h2>UX-, Tech- und Compliance-Review: konkrete Hebel für den deutschen schleich-Shop priorisieren.</h2>
+              <h2>45-Minuten-Digital-Quick-Read: drei Befunde, konkrete Konsequenzen, priorisierte nächste Schritte.</h2>
               <p>
-                Sinnvoll ist kein allgemeiner Austausch, sondern ein fokussierter Review mit priorisierter Hebelliste. Ziel ist eine belastbare Shortlist für Technik, Nutzerführung, Suche, Commerce-Führung, Sichtbarkeit, Compliance und GEO.
+                Sinnvoll ist kein allgemeiner Austausch, sondern ein fokussierter Quick Read: Was zeigt der externe Blick zu Compliance, Non-Brand-Sichtbarkeit und Produktentdeckung – und welche Maßnahmen gehören in das nächste Quartal?
               </p>
               <a className="primary-cta" href="mailto:anton.klees@active-value.de?subject=schleich%20Webshop-Impulsanalyse">
                 Review mit active value vorbereiten <ArrowRight size={18} />
