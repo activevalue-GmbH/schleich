@@ -208,22 +208,30 @@
 .active-logo-block {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.18rem;
+  align-items: flex-start;
+  gap: 0.16rem;
   line-height: 1;
 }
 
-.active-logo-image {
-  display: block;
-  width: clamp(5.4rem, 8.2vw, 7.2rem);
-  height: auto;
-  object-fit: contain;
+.active-wordmark {
+  display: inline-grid;
+  gap: 0.02rem;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: clamp(1.05rem, 1.55vw, 1.32rem);
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  color: #181713;
+}
+
+.active-wordmark span:last-child {
+  color: #b24a42;
+  transform: translateX(0.78em);
 }
 
 .active-logo-url {
   font-family: "Manrope", Arial, sans-serif;
   font-size: clamp(0.58rem, 0.72vw, 0.72rem);
-  font-weight: 700;
+  font-weight: 750;
   letter-spacing: 0.03em;
   color: #55514a;
   transform: translateY(-0.02rem);
@@ -278,13 +286,17 @@
 }
 
 .hero-section {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(22rem, 0.72fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(22rem, 0.82fr);
+  align-items: stretch;
   gap: clamp(2rem, 4vw, 4.8rem);
   max-width: 1180px;
   margin: 3.2rem auto 0;
   padding: clamp(2.4rem, 6vw, 5.2rem) clamp(1.2rem, 4vw, 4rem) clamp(2rem, 5vw, 4rem);
-  background: rgba(255, 255, 255, 0.52);
+  background:
+    radial-gradient(circle at 95% 12%, rgba(178, 74, 66, 0.08), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(250, 247, 241, 0.76));
   border: 1px solid rgba(28, 26, 21, 0.08);
   box-shadow: 0 26px 80px rgba(43, 34, 20, 0.08);
 }
@@ -317,8 +329,45 @@
 
 .hero-panel {
   display: flex;
-  flex-direction: column;
+  min-width: 0;
+}
+
+.hero-dossier-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
   gap: 1rem;
+  width: 100%;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(28, 26, 21, 0.11);
+  box-shadow: 0 22px 64px rgba(33, 26, 17, 0.075);
+}
+
+.hero-dossier-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.95rem;
+  border-bottom: 1px solid rgba(28, 26, 21, 0.1);
+}
+
+.hero-dossier-head span {
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #756f64;
+}
+
+.hero-dossier-head p {
+  max-width: 18rem;
+  margin: 0;
+  text-align: right;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #625b51;
 }
 
 .summary-card,
@@ -337,7 +386,7 @@
 
 .summary-card,
 .focus-card {
-  padding: 2rem;
+  padding: clamp(1.35rem, 2vw, 1.75rem);
 }
 
 .summary-card span,
@@ -354,8 +403,8 @@
 
 .summary-card h2 {
   margin: 0;
-  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-  line-height: 1.03;
+  font-size: clamp(1.55rem, 2.2vw, 2.1rem);
+  line-height: 1.06;
 }
 
 .summary-card p,
@@ -384,6 +433,7 @@
 
 .browser-card {
   overflow: hidden;
+  box-shadow: none;
 }
 
 .browser-topbar {
@@ -1043,6 +1093,15 @@
   .observation-card {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .hero-dossier-head {
+    flex-direction: column;
+  }
+
+  .hero-dossier-head p {
+    max-width: none;
+    text-align: left;
   }
 }
 

@@ -187,12 +187,11 @@ export default function Home() {
     <div className="site-shell">
       <header className="topbar">
         <a className="brand-cluster" href="#top" aria-label="Zum Seitenanfang">
-          <span className="active-logo-block">
-            <img
-              className="active-logo-image"
-              src="https://activevalue-gmbh.github.io/bruder/assets/logo.png"
-              alt="active value"
-            />
+          <span className="active-logo-block" aria-label="active value">
+            <span className="active-wordmark">
+              <span>active</span>
+              <span>value</span>
+            </span>
             <span className="active-logo-url">active-value.de</span>
           </span>
           <span className="brand-divider" />
@@ -228,18 +227,23 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.12, ease: "easeOut" }}
           >
-            <div className="summary-card">
-              <span>Kurzaussage</span>
-              <h2>Die Marke ist stark. Der Hebel liegt im schnelleren Zugang zu den Spielwelten.</h2>
-              <p>Eine externe E-Commerce-, Nutzerführungs- und Sichtbarkeitsperspektive von active value.</p>
-            </div>
-            <BrowserFindingCard />
-            <div className="focus-card">
-              <span>Fokus</span>
-              <p>Performance messbar verbessern</p>
-              <p>Spielwelt-Einstiege klarer führen</p>
-              <p>Suche nach Kaufintention führen</p>
-              <p>Warenkorbwert markenlogisch erhöhen</p>
+            <div className="hero-dossier-card">
+              <div className="hero-dossier-head">
+                <span>Analyse-Fokus</span>
+                <p>Externe E-Commerce-, Nutzerführungs- und Sichtbarkeitsperspektive von active value.</p>
+              </div>
+              <div className="summary-card">
+                <span>Kurzaussage</span>
+                <h2>Die Marke ist stark. Der Hebel liegt im schnelleren Zugang zu den Spielwelten.</h2>
+              </div>
+              <BrowserFindingCard />
+              <div className="focus-card">
+                <span>Was daraus folgt</span>
+                <p>Performance messbar verbessern</p>
+                <p>Spielwelt-Einstiege klarer führen</p>
+                <p>Suche nach Kaufintention führen</p>
+                <p>Warenkorbwert markenlogisch erhöhen</p>
+              </div>
             </div>
           </motion.aside>
         </section>
