@@ -219,32 +219,40 @@ export default function Home() {
           </motion.div>
 
           <motion.aside
-            className="hero-board"
+            className="hero-board hero-board--calm"
             aria-label="Quick-Read-Evidenz zur schleich-Analyse"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.12, ease: "easeOut" }}
           >
-            {heroStats.map((stat) => (
-              <article className="hero-stat-card" key={stat.label}>
-                <span>{stat.label}</span>
-                <strong>{stat.value}</strong>
-                <p>{stat.note}</p>
-              </article>
-            ))}
-            <article className="quick-read-card">
+            <article className="hero-evidence-panel">
+              <span className="hero-panel-label">Evidenz statt Dashboard</span>
+              <div className="hero-dominant-stat">
+                <strong>317k</strong>
+                <p>monatliche Besuche machen den Shop-Einstieg zur kommerziellen Schlüsselfrage.</p>
+              </div>
+              <div className="hero-marginalia" aria-label="Zusätzliche Quick-Read-Signale">
+                {heroStats.slice(1).map((stat) => (
+                  <div key={stat.label}>
+                    <span>{stat.label}</span>
+                    <strong>{stat.value}</strong>
+                    <p>{stat.note}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
+            <article className="quick-read-card quick-read-card--inline">
               <div className="quick-read-head">
                 <span>45-Minuten-Gespräch</span>
                 <strong>Digital Quick Read</strong>
               </div>
-              <p>Kein Pitch. Drei Befunde mit direktem Business-Impact und einer priorisierten Route für das nächste Quartal.</p>
+              <p>Kein Pitch. Eine priorisierte Route aus drei Befunden: Compliance, Non-Brand-Sichtbarkeit und Produktentdeckung.</p>
               <div className="quick-read-levers">
                 {heroLevers.map((lever) => (
                   <span key={lever}>{lever}</span>
                 ))}
               </div>
             </article>
-            <BrowserFindingCard />
           </motion.aside>
         </section>
 
@@ -274,7 +282,7 @@ export default function Home() {
             const Icon = item.icon;
             return (
               <motion.article
-                className="evidence-card"
+                className={`evidence-card ${index === 0 ? "evidence-card--lead" : ""}`}
                 key={item.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
