@@ -207,39 +207,22 @@
 
 .active-logo-block {
   display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.16rem;
+  align-items: center;
   line-height: 1;
 }
 
-.active-wordmark {
-  display: inline-grid;
-  gap: 0.02rem;
-  font-family: "Manrope", Arial, sans-serif;
-  font-size: clamp(1.05rem, 1.55vw, 1.32rem);
-  font-weight: 900;
-  letter-spacing: -0.075em;
-  color: #181713;
-}
-
-.active-wordmark span:last-child {
-  color: #b24a42;
-  transform: translateX(0.78em);
-}
-
-.active-logo-url {
-  font-family: "Manrope", Arial, sans-serif;
-  font-size: clamp(0.58rem, 0.72vw, 0.72rem);
-  font-weight: 750;
-  letter-spacing: 0.03em;
-  color: #55514a;
-  transform: translateY(-0.02rem);
+.active-logo-image {
+  display: block;
+  width: auto;
+  height: clamp(2.55rem, 3.25vw, 3.15rem);
+  max-width: min(38vw, 11rem);
+  object-fit: contain;
+  border-radius: 0.22rem;
 }
 
 .brand-divider {
   width: 1px;
-  height: 2.55rem;
+  height: 2.7rem;
   background: rgba(24, 23, 19, 0.14);
 }
 
@@ -1318,6 +1301,11 @@
   .topbar {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .active-logo-image {
+    height: 2.45rem;
+    max-width: 10rem;
   }
 
   .main-nav {

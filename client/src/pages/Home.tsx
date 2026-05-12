@@ -176,11 +176,7 @@ export default function Home() {
       <header className="topbar">
         <a className="brand-cluster" href="#top" aria-label="Zum Seitenanfang">
           <span className="active-logo-block" aria-label="active value">
-            <span className="active-wordmark">
-              <span>active</span>
-              <span>value</span>
-            </span>
-            <span className="active-logo-url">active-value.de</span>
+            <img className="active-logo-image" src="/assets/active-value-logo.png" alt="active value" />
           </span>
           <span className="brand-divider" />
           <span className="client-logo">schleich</span>
